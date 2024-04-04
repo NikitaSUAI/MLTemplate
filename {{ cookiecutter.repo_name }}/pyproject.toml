@@ -1,16 +1,23 @@
-[build-system]
-requires = ["setuptools", "setuptools-scm"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "{{ cookiecutter.project_name }}"
-version = "2024.0.0a1"
-authors = [
-    {name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}"},
+[tool.flake8]
+max-line-length = 79
+exclude = [
+    ".git",
+    "__pycache__",
+    "docs",
+    "old",
+    "build",
+    "dist"
 ]
-description = "{{ cookiecutter.description }}"
-readme = "README.md"
-requires-python = "==3.8"
-license = {text = "BSD-3-Clause"}
-dynamic = ["version"]
+extend-ignore = [
+    "E203",
+    "W501",
+    "E266",
+    "C901"
+]
 
+[tool.black]
+line-length = 79
+
+[tool.isort]
+line_length = 79
+include_trailing_comma = true
