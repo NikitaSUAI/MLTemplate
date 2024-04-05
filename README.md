@@ -22,8 +22,10 @@ $ conda install cookiecutter
 
 ### To start a new project, run:
 ------------
-
-    cookiecutter -c v1 https://gitlab.com/mlresearch1/mltemplate
+~~~bash
+~$ cookiecutter https://gitlab.com/mlresearch1/mltemplate
+or 
+~$ cookiecutter https://github.com/NikitaSUAI/MLTemplate
 
 
 [![asciicast](https://asciinema.org/a/244658.svg)](https://asciinema.org/a/244658)
